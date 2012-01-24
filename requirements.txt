@@ -1,0 +1,2 @@
+flask
+-e 'git+http://github.com/sjl/flask-lesscss.git@v0.9.1#egg=flask-lesscss'

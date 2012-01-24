@@ -1,0 +1,38 @@
+.border-radius(@radius: 4px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+.font-face(@name, @file-name) {
+	@font-face {
+		font-weight: normal;
+		font-style: normal;
+		font-family: @name;
+		src: url("@{fonts-path}/@{file-name}.eot");
+		src: url("@{fonts-path}/@{file-name}.eot?#iefix") format('embedded-opentype'),
+			url("@{fonts-path}/@{file-name}.woff") format('woff'),
+			url("@{fonts-path}/@{file-name}.ttf") format('truetype'),
+			url("@{fonts-path}/@{file-name}.svg#@{name}") format('svg');
+	}
+}
+.gradient(@start: #FFFFFF, @end: #000000, @from: top) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@from, @start, @end);
+	background-image: -moz-linear-gradient(@from, @start, @end);
+	background-image: -ms-linear-gradient(@from, @start, @end);
+	background-image: -o-linear-gradient(@from, @start, @end);
+	background-image: linear-gradient(@from, @start, @end);
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorStr='@{start}', EndColorStr='@{end}')";
+}
+.rotate(@angle: 8deg) {
+	-webkit-transform: rotate(@angle);
+	-moz-transform: rotate(@angle);
+	-ms-transform: rotate(@angle);
+	-o-transform: rotate(@angle);
+	transform: rotate(@angle);
+}
+.s(@size){
+    width: @size;
+    height: @size;
+}
+.h{display: none;}
