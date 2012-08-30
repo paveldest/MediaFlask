@@ -1,11 +1,7 @@
 from flask import Flask, render_template, abort, send_from_directory,make_response,send_file
 from jinja2 import TemplateNotFound
-from flaskext.lesscss import lesscss
 
 app = Flask(__name__)
-
-from flaskext.lesscss import lesscss
-lesscss(app)
 
 app.run
 
@@ -25,4 +21,4 @@ def page_not_found(e):
 if __name__ == '__main__':
     app.debug = True
     if (app.debug):
-        app.run(host='192.168.96.128', port=8080)
+        app.run()
