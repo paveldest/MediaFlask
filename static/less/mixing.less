@@ -86,29 +86,27 @@
 // Border Radius
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
   border-radius: @radius;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 // Single Corner Border Radius
 .border-top-left-radius(@radius) {
   -webkit-border-top-left-radius: @radius;
-  -moz-border-radius-topleft: @radius;
   border-top-left-radius: @radius;
 }
 .border-top-right-radius(@radius) {
   -webkit-border-top-right-radius: @radius;
-  -moz-border-radius-topright: @radius;
   border-top-right-radius: @radius;
 }
 .border-bottom-right-radius(@radius) {
   -webkit-border-bottom-right-radius: @radius;
-  -moz-border-radius-bottomright: @radius;
   border-bottom-right-radius: @radius;
 }
 .border-bottom-left-radius(@radius) {
   -webkit-border-bottom-left-radius: @radius;
-  -moz-border-radius-bottomleft: @radius;
   border-bottom-left-radius: @radius;
 }
 
@@ -133,7 +131,6 @@
 // Drop shadows
 .box-shadow(@shadow) {
   -webkit-box-shadow: @shadow;
-  -moz-box-shadow: @shadow;
   box-shadow: @shadow;
 }
 
@@ -262,31 +259,6 @@
 .opacity(@opacity) {
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
-}
-
-
-
-// BACKGROUNDS
-// --------------------------------------------------
-
-// Add an alphatransparency value to any background or border color (via Elyse Holladay)
-#translucent {
-  .background(@color: @white, @alpha: 1) {
-    background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-  }
-  .border(@color: @white, @alpha: 1) {
-    border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-    .background-clip(padding-box);
-  }
-}
-
-// Gradient Bar Colors for buttons and alerts
-  .gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
-  color: @textColor;
-  text-shadow: @textShadow;
-  #gradient > .vertical(@primaryColor, @secondaryColor);
-  border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
-  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
 
 // Gradients
