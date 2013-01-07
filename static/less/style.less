@@ -1,2 +1,29 @@
-@import "reset.less";
 @import "mixing.less";
+@import "reset.less";
+
+
+// Main style
+
+
+
+
+// Response style
+@media only screen and (max-width: 479px) {
+  @import 'response/_small';
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  @import 'response/_medium';
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @import 'response/_large';
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @import 'response/_x-large';
+}
+
+@media only screen and (min-width: 1280px) {
+  @import 'response/_xx-large';
+}
