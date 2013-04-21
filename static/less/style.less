@@ -1,13 +1,23 @@
-@import "mixing.less";
-@import "reset.less";
+@import "_mixing.less";
+@import "_reset.less";
 
 
 // Main style
 
 
 
+// end Main style
 
-// Response style
+// Include style block
+@import "block/_helper";
+@import "block/_select2";
+
+
+
+
+// end Include style block
+
+// Response block
 @media only screen and (max-width: 479px) {
   @import 'response/_small';
 }
